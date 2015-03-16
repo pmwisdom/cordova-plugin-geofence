@@ -44,6 +44,7 @@
 
         <lib-file src="src/android/libs/gson-2.3.jar" />
         <lib-file src="src/android/libs/android-support-v4.jar" />
+        
 
         <config-file target="config.xml" parent="/*">
             <feature name="GeofencePlugin">
@@ -57,6 +58,7 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
             <receiver android:name="com.cowbell.cordova.geofence.BootReceiver">
                 <intent-filter>
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
